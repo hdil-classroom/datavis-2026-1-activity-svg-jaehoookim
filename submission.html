@@ -12,25 +12,110 @@
 		}
 
 		#visualization-activity {
-			width: 600px;
-			height: 500px;
+			width: 800px;
+			height: 800px;
 		}
 
 		/* YOUR CSS CODE WILL GO HERE */
-
-
+		.line-1 {
+			fill: #0648e3; 
+		}
+		.line-2 {
+			fill: #00a84d; 
+		}
+		.line-3 {
+			fill: #de670c; 
+		}
 	</style>
 </head>
 
 <body>
 	<h1 id="header-title">
-		In-Class Acitivity by REPLACE_WITH_YOUR_NAME
+		In-Class Acitivity by Jaehoo Kim
 	</h1>
 
 	<svg id="visualization-activity">
 		<!-- YOUR SVG CODE WILL GO HERE -->
 
+		<!-- Title -->
+		<text x="420" y="795" text-anchor="middle" font-size="20">Station Name</text>
+		<text transform="translate(20, 375) rotate(-90)" text-anchor="middle" font-size="20">Entry Count</text>
 
+		<!-- Axis -->
+		<line x1="70" y1="750" x2="770" y2="750" stroke="black" stroke-width="2"/>
+		<line x1="70" y1="0" x2="70" y2="750" stroke="black" stroke-width="1"/>
+
+
+		<!-- Legend -->
+		<g transform="translate(680, 50)" font-size="14">
+			<rect class="line-1" x="0" y="0" width="15" height="15" />
+			<text x="25" y="12">Line 1</text>
+		
+			<rect class="line-2" x="0" y="25" width="15" height="15" />
+			<text x="25" y="37">Line 2</text>
+		
+			<rect class="line-3" x="0" y="50" width="15" height="15" />
+			<text x="25" y="62">Line 3</text>
+		</g>
+
+
+		<!-- Data -->
+		<g class="홍대입구">
+			<rect class="bar line-2" x="120" y="22" width="60" height="728" />
+			<text x="150" y="770" text-anchor="middle">홍대입구</text>
+		</g>
+
+		<g class="잠실(송파구청)">
+			<rect class="bar line-2" x="220" y="120" width="60" height="630" />
+			<text x="250" y="770" text-anchor="middle">잠실(송파구청)</text>
+		</g>
+
+		<g class="고속터미널">
+			<rect class="bar line-3" x="320" y="215" width="60" height="535" />
+			<text x="350" y="770" text-anchor="middle">고속터미널</text>
+		</g>
+
+		<g class="서울역">
+			<rect class="bar line-1" x="420" y="344" width="60" height="406" />
+			<text x="450" y="770" text-anchor="middle">서울역</text>
+		</g>
+
+		<g class="신림">
+			<rect class="bar line-2" x="520" y="368" width="60" height="382" />
+			<text x="550" y="770" text-anchor="middle">신림</text>
+		</g>
+
+		<g class="신도림">
+			<rect class="bar line-2" x="620" y="375" width="60" height="375" />
+			<text x="650" y="770" text-anchor="middle">신도림</text>
+		</g>
+
+		<!-- Y-axis labels -->
+		<g class="y-axis-labels" text-anchor="end" font-size="12">
+			<text x="65" y="755">0</text>
+			<line x1="65" y1="750" x2="70" y2="750" stroke="black" />
+		
+			<text x="65" y="655">10,000</text>
+			<line x1="65" y1="650" x2="70" y2="650" stroke="black" />
+		
+			<text x="65" y="555">20,000</text>
+			<line x1="65" y1="550" x2="70" y2="550" stroke="black" />
+		
+			<text x="65" y="455">30,000</text>
+			<line x1="65" y1="450" x2="70" y2="450" stroke="black" />
+		
+			<text x="65" y="355">40,000</text>
+			<line x1="65" y1="350" x2="70" y2="350" stroke="black" />
+		
+			<text x="65" y="255">50,000</text>
+			<line x1="65" y1="250" x2="70" y2="250" stroke="black" />
+		
+			<text x="65" y="155">60,000</text>
+			<line x1="65" y1="150" x2="70" y2="150" stroke="black" />
+		
+			<text x="65" y="55">70,000</text>
+			<line x1="65" y1="50" x2="70" y2="50" stroke="black" />
+		</g>
 	</svg>
 
 </body>
